@@ -1,0 +1,19 @@
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes.dex : \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/R$array.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerIntentService.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerBootReceiver.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/BuildConfig.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/R$string.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerNotifier.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerPlayMediaService.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/preference/AutoAnswerDialogPreference.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerReceiver.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/R$xml.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/R$drawable.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerPreferenceActivity.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/R.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/R$attr.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/android/internal/telephony/ITelephony$Stub$Proxy.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/android/internal/telephony/ITelephony$Stub.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/android/internal/telephony/ITelephony.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/dexedLibs/android-support-v4-f1505d34482fea893283a94d147f73b4.jar \
