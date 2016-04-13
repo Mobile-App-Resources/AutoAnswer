@@ -1,15 +1,15 @@
-# view AndroidManifest.xml #generated:31
+# view AndroidManifest.xml #generated:33
 -keep class com.groglogs.autoanswer.AutoAnswerBootReceiver { <init>(...); }
 
-# view AndroidManifest.xml #generated:37
+# view AndroidManifest.xml #generated:39
 -keep class com.groglogs.autoanswer.AutoAnswerIntentService { <init>(...); }
 
-# view AndroidManifest.xml #generated:38
+# view AndroidManifest.xml #generated:40
 -keep class com.groglogs.autoanswer.AutoAnswerPlayMediaService { <init>(...); }
 
-# view AndroidManifest.xml #generated:18
+# view AndroidManifest.xml #generated:20
 -keep class com.groglogs.autoanswer.AutoAnswerPreferenceActivity { <init>(...); }
 
-# view AndroidManifest.xml #generated:26
+# view AndroidManifest.xml #generated:28
 -keep class com.groglogs.autoanswer.AutoAnswerReceiver { <init>(...); }
 

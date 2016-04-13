@@ -5,6 +5,8 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 
+import android.util.Log;
+
 
 public class AutoAnswerPreferenceActivity extends PreferenceActivity implements OnSharedPreferenceChangeListener {
 
@@ -15,6 +17,10 @@ public class AutoAnswerPreferenceActivity extends PreferenceActivity implements 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		mNotifier = new AutoAnswerNotifier(this);
+                Log.v("mylog","autoanswer v is created");
+                Log.i("mylog","autoanswer i is created");
+                Log.d("mylog","autoanswer d is created");
+                Log.w("mylog","autoanswer w is created");
 		mNotifier.updateNotification();
 		SharedPreferences sharedPreferences = getPreferenceManager().getSharedPreferences();
 		sharedPreferences.registerOnSharedPreferenceChangeListener(this);
