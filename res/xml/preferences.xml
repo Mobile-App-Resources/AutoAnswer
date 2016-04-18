@@ -4,4 +4,7 @@
 		android:entries="@array/delay"	android:entryValues="@array/delay_values"
 		android:defaultValue="2" />
 	<CheckBoxPreference android:key="no_second_call" android:title="@string/no_second_call"/>
+	<EditTextPreference android:key="starturl" android:title="@string/starturl" android:defaultValue="@string/starturl_default"  />
+	<EditTextPreference android:key="stopurl"  android:title="@string/stopurl"  android:defaultValue="@string/stopurl_default" />
+
 </PreferenceScreen>

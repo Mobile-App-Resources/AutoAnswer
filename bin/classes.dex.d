@@ -5,6 +5,8 @@
 /home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/BuildConfig.class \
 /home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/R$string.class \
 /home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerNotifier.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/R$id.class \
+/home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerReceiver$2.class \
 /home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerReceiver$1.class \
 /home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/AutoAnswerPlayMediaService.class \
 /home/xuyang/android/android-sdk-linux/tools/AutoAnswer/bin/classes/com/groglogs/autoanswer/preference/AutoAnswerDialogPreference.class \

@@ -30,7 +30,7 @@ public class AutoAnswerReceiver extends BroadcastReceiver {
 	public void onReceive(Context context, Intent intent) {
 
 		// Load preferences
-		SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
+		final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
 	      	Log.w("mylog","phone event1");
 
 		// Check phone state
@@ -47,53 +47,56 @@ public class AutoAnswerReceiver extends BroadcastReceiver {
 
 			// Call a service, since this could take a few seconds
 			context.startService(new Intent(context, AutoAnswerIntentService.class));
-		}		
+		}else{		
 
-		if (phone_state.equals(TelephonyManager.EXTRA_STATE_OFFHOOK) && prefs.getBoolean("enabled", false)) {
+		        if (phone_state.equals(TelephonyManager.EXTRA_STATE_OFFHOOK) && prefs.getBoolean("enabled", false)) {
 
-	      	Log.w("mylog","phone is picked up");
-		   AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
-	           am.setSpeakerphoneOn(true);  
-                   am.setStreamVolume(AudioManager.STREAM_VOICE_CALL,  
-                          am.getStreamMaxVolume(AudioManager.STREAM_VOICE_CALL),  
-                          AudioManager.STREAM_VOICE_CALL); 
+	      	           Log.w("mylog","phone is picked up");
+		           AudioManager am = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+	                   am.setSpeakerphoneOn(true);  
+                           am.setStreamVolume(AudioManager.STREAM_VOICE_CALL,  
+                                  am.getStreamMaxVolume(AudioManager.STREAM_VOICE_CALL),  
+                                  AudioManager.STREAM_VOICE_CALL); 
 
-	           //mediaPlayer = new MediaPlayer() ;
-                   //try {
-        
-                   //    mediaPlayer.setDataSource(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_MUSIC)
-                   //         + "/tongnian.mp3");
-                   //    mediaPlayer.prepare();
-                   //}
-                   //catch (IOException e){
-                   //}
-        
-                   //mediaPlayer.start();
+		           new Thread(){
 
-		   //	context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.bagualu.net")));
+		        	@Override
+		        	public void run() {
+                                     try{
+		                          HttpClient client = new DefaultHttpClient();
+                                          HttpGet request = new HttpGet(prefs.getString("starturl",""));
+		                          HttpResponse response = client.execute(request);
+		                          response.getEntity().getContent().close();
+                                     }
+                                     catch (Exception e){
+		                          e.printStackTrace();
+                                     }
+		        	}
+		           }.start() ;
 
-		   new Thread(){
+		        }		
 
-			@Override
-			public void run() {
-                             try{
-		                  Log.w("mylog","begin http request");
-		                  HttpClient client = new DefaultHttpClient();
-		                  Log.w("mylog","begin http request 2");
-                                  HttpGet request = new HttpGet("http://192.168.0.103:8100/start");
-		                  Log.w("mylog","begin http request 3");
-		                  HttpResponse response = client.execute(request);
-		                  Log.w("mylog","begin http request 4");
-		                  response.getEntity().getContent().close();
-		                  Log.w("mylog","finish http request");
-                             }
-                             catch (Exception e){
-		                  Log.w("mylog","http request exception happened");
-		                  e.printStackTrace();
-                             }
-			}
-		   }.start() ;
+		        if (phone_state.equals(TelephonyManager.EXTRA_STATE_IDLE) && prefs.getBoolean("enabled", false)) {
 
+	      	           Log.w("mylog","phone is done");
+
+		           new Thread(){
+
+		        	@Override
+		        	public void run() {
+                                     try{
+		                          HttpClient client = new DefaultHttpClient();
+                                          HttpGet request = new HttpGet(prefs.getString("stopurl",""));
+		                          HttpResponse response = client.execute(request);
+		                          response.getEntity().getContent().close();
+                                     }
+                                     catch (Exception e){
+		                          e.printStackTrace();
+                                     }
+		        	}
+		           }.start() ;
+
+		        }
 		}		
 	}
 }
